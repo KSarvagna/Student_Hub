@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --app-background: #F5F6FA;
+  --app-navigation: #FFFFFF;
+  --app-card: #FFFFFF;
+  --app-surface: #E8EDFA;
+  --app-primary-text: #1E293B;
+  --app-secondary-text: #64748B;
+  --app-border: #E2E8F0;
+  --app-navy: #172554;
+  --app-heading: #172554;
+  --app-accent: #3157B7;
+  --app-soft-accent: #E8EDFA;
+  --app-focus: #3157B7;
+  --app-neutral-badge: #F1F5F9;
+  --app-neutral-badge-border: #CBD5E1;
+  --app-neutral-badge-text: #334155;
+  --app-green-bg: #ECFDF5;
+  --app-green-border: #A7F3D0;
+  --app-green-text: #065F46;
+  --app-amber-bg: #FFFBEB;
+  --app-amber-border: #FDE68A;
+  --app-amber-text: #78350F;
+  --app-red-bg: #FFF1F2;
+  --app-red-border: #FECDD3;
+  --app-red-text: #881337;
+  --app-sky-bg: #F0F9FF;
+  --app-sky-border: #BAE6FD;
+  --app-sky-text: #0C4A6E;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  color: var(--app-primary-text);
+  background: var(--app-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --app-background: #0B1224;
+  --app-navigation: #111B30;
+  --app-card: #17233D;
+  --app-surface: #1E2D49;
+  --app-primary-text: #F8FAFC;
+  --app-secondary-text: #AAB7D1;
+  --app-border: #293954;
+  --app-navy: #111B30;
+  --app-heading: #F8FAFC;
+  --app-accent: #3157B7;
+  --app-soft-accent: #8DA8F0;
+  --app-focus: #8DA8F0;
+  --app-neutral-badge: #1E2D49;
+  --app-neutral-badge-border: #40516D;
+  --app-neutral-badge-text: #D6E0F2;
+  --app-green-bg: #12382F;
+  --app-green-border: #246B58;
+  --app-green-text: #A7F3D0;
+  --app-amber-bg: #453516;
+  --app-amber-border: #80652B;
+  --app-amber-text: #FDE68A;
+  --app-red-bg: #451E2D;
+  --app-red-border: #7F344D;
+  --app-red-text: #FECDD3;
+  --app-sky-bg: #152D45;
+  --app-sky-border: #2C557A;
+  --app-sky-text: #BAE6FD;
+}
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-navy: var(--app-navy);
+  --color-brand-cobalt: var(--app-accent);
+  --color-brand-warm: var(--app-background);
+  --color-brand-pale: var(--app-soft-accent);
+  --color-brand-text: var(--app-primary-text);
+  --color-brand-secondary: var(--app-secondary-text);
+  --color-brand-border: var(--app-border);
+  --color-brand-card: var(--app-card);
+  --color-brand-navigation: var(--app-navigation);
+  --color-status-neutral-bg: var(--app-neutral-badge);
+  --color-status-neutral-border: var(--app-neutral-badge-border);
+  --color-status-neutral-text: var(--app-neutral-badge-text);
+
+  --color-slate-50: var(--app-background);
+  --color-slate-100: var(--app-surface);
+  --color-slate-200: var(--app-border);
+  --color-slate-300: var(--app-border);
+  --color-slate-500: var(--app-secondary-text);
+  --color-slate-600: var(--app-secondary-text);
+  --color-slate-700: var(--app-primary-text);
+  --color-slate-800: var(--app-primary-text);
+  --color-slate-900: var(--app-primary-text);
+  --color-slate-950: var(--app-heading);
+
+  --color-teal-50: var(--app-surface);
+  --color-teal-100: var(--app-surface);
+  --color-teal-200: var(--app-border);
+  --color-teal-300: var(--app-soft-accent);
+  --color-teal-400: var(--app-focus);
+  --color-teal-500: var(--app-accent);
+  --color-teal-600: var(--app-accent);
+  --color-teal-700: var(--app-focus);
+  --color-teal-800: var(--app-soft-accent);
+  --color-teal-900: var(--app-primary-text);
+  --color-teal-950: var(--app-primary-text);
+
+  --color-emerald-50: var(--app-green-bg);
+  --color-emerald-200: var(--app-green-border);
+  --color-emerald-800: var(--app-green-text);
+  --color-emerald-900: var(--app-green-text);
+  --color-amber-50: var(--app-amber-bg);
+  --color-amber-200: var(--app-amber-border);
+  --color-amber-950: var(--app-amber-text);
+  --color-rose-50: var(--app-red-bg);
+  --color-rose-200: var(--app-red-border);
+  --color-rose-300: var(--app-red-border);
+  --color-rose-800: var(--app-red-text);
+  --color-rose-900: var(--app-red-text);
+  --color-red-700: var(--app-red-text);
+  --color-sky-50: var(--app-sky-bg);
+  --color-sky-200: var(--app-sky-border);
+  --color-sky-950: var(--app-sky-text);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--app-primary-text);
+  background: var(--app-background);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  color: #FFFFFF;
+  background: #3157B7;
+}

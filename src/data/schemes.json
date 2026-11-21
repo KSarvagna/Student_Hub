@@ -1,0 +1,625 @@
+[
+  {
+    "id": "example-scholarship-1",
+    "type": "scholarship",
+    "name": "Example Student Scholarship One (placeholder)",
+    "provider": "Example Ministry One (placeholder)",
+    "summary_plain": "Placeholder scholarship summary. All details TODO(VERIFY).",
+    "benefit_text": "TODO(VERIFY): Placeholder benefit information.",
+    "rules": [
+      {
+        "id": "income-limit",
+        "field": "annual_family_income",
+        "op": "<=",
+        "value": 400000,
+        "label": "Family income is within the placeholder limit",
+        "missing_hint": "Your family income is above the placeholder limit. TODO(VERIFY)"
+      },
+      {
+        "id": "category-list",
+        "field": "category",
+        "op": "in",
+        "value": ["sc", "st"],
+        "label": "Category matches the placeholder categories",
+        "missing_hint": "Your category is not in the placeholder list. TODO(VERIFY)"
+      }
+    ],
+    "documents": [
+      { "name": "Example document (placeholder)", "where_to_get": "TODO(VERIFY)" }
+    ],
+    "deadline": "2026-12-31",
+    "apply_url": "https://example.com/apply-scholarship-one",
+    "source_url": "https://example.com/scholarship-one",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-scholarship-2",
+    "type": "scholarship",
+    "name": "Example Student Scholarship Two (placeholder)",
+    "provider": "Example Education Office (placeholder)",
+    "summary_plain": "Placeholder scholarship summary. Eligibility details TODO(VERIFY).",
+    "benefit_text": "TODO(VERIFY): Placeholder benefit information.",
+    "rules": [
+      {
+        "id": "course-level",
+        "field": "course_level",
+        "op": "==",
+        "value": "undergraduate",
+        "label": "Course level matches the placeholder requirement",
+        "missing_hint": "Your course level does not match the placeholder requirement. TODO(VERIFY)"
+      },
+      {
+        "id": "general-category",
+        "field": "category",
+        "op": "==",
+        "value": "general",
+        "label": "Category matches the placeholder requirement",
+        "missing_hint": "Your category does not match the placeholder requirement. TODO(VERIFY)"
+      }
+    ],
+    "documents": [
+      { "name": "Example course record (placeholder)", "where_to_get": "TODO(VERIFY)" }
+    ],
+    "deadline": "2027-01-15",
+    "apply_url": "https://example.com/apply-scholarship-two",
+    "source_url": "https://example.com/scholarship-two",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-scholarship-3",
+    "type": "scholarship",
+    "name": "Example Student Scholarship Three (placeholder)",
+    "provider": "Example Student Support Board (placeholder)",
+    "summary_plain": "Placeholder scholarship summary. Eligibility details TODO(VERIFY).",
+    "benefit_text": "TODO(VERIFY): Placeholder benefit information.",
+    "rules": [
+      {
+        "id": "minimum-percentage",
+        "field": "last_exam_percentage",
+        "op": ">=",
+        "value": 80,
+        "label": "Last exam percentage meets the placeholder threshold",
+        "missing_hint": "Your last exam percentage is below the placeholder threshold. TODO(VERIFY)"
+      }
+    ],
+    "documents": [
+      { "name": "Example exam record (placeholder)", "where_to_get": "TODO(VERIFY)" }
+    ],
+    "deadline": null,
+    "apply_url": "https://example.com/apply-scholarship-three",
+    "source_url": "https://example.com/scholarship-three",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-scheme-1",
+    "type": "scheme",
+    "name": "Example Student Support Scheme (placeholder)",
+    "provider": "Example Public Education Department (placeholder)",
+    "summary_plain": "Placeholder government scheme summary. All details TODO(VERIFY).",
+    "benefit_text": "TODO(VERIFY): Placeholder benefit information.",
+    "rules": [
+      {
+        "id": "eligible-state",
+        "field": "state",
+        "op": "in",
+        "value": ["Karnataka", "Tamil Nadu"],
+        "label": "State matches the placeholder list",
+        "missing_hint": "Your state is not in the placeholder list. TODO(VERIFY)"
+      },
+      {
+        "id": "income-limit",
+        "field": "annual_family_income",
+        "op": "<=",
+        "value": 750000,
+        "label": "Family income is within the placeholder limit",
+        "missing_hint": "Your family income is above the placeholder limit. TODO(VERIFY)"
+      }
+    ],
+    "documents": [
+      { "name": "Example residence document (placeholder)", "where_to_get": "TODO(VERIFY)" }
+    ],
+    "deadline": "2027-02-01",
+    "apply_url": "https://example.com/apply-scheme-one",
+    "source_url": "https://example.com/scheme-one",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-internship-1",
+    "type": "internship",
+    "name": "Example Learning Internship One (placeholder)",
+    "provider": "Example Learning Office (placeholder)",
+    "summary_plain": "Placeholder internship summary. All details TODO(VERIFY).",
+    "benefit_text": "TODO(VERIFY): Placeholder benefit information.",
+    "rules": [
+      {
+        "id": "women-applicants",
+        "field": "gender",
+        "op": "==",
+        "value": "female",
+        "label": "Gender matches the placeholder requirement",
+        "missing_hint": "Gender does not match the placeholder requirement. TODO(VERIFY)"
+      },
+      {
+        "id": "related-stream",
+        "field": "stream",
+        "op": "in",
+        "value": ["engineering", "science"],
+        "label": "Stream matches the placeholder list",
+        "missing_hint": "Your stream is not in the placeholder list. TODO(VERIFY)"
+      }
+    ],
+    "documents": [
+      { "name": "Example student record (placeholder)", "where_to_get": "TODO(VERIFY)" }
+    ],
+    "deadline": "2026-12-20",
+    "apply_url": "https://example.com/apply-internship-one",
+    "source_url": "https://example.com/internship-one",
+    "last_verified": "2026-11-19",
+    "verified": false,
+    "duration": "TODO(VERIFY): Placeholder duration.",
+    "location": "TODO(VERIFY): Placeholder location.",
+    "stipend_text": "TODO(VERIFY): Placeholder stipend information."
+  },
+  {
+    "id": "example-internship-2",
+    "type": "internship",
+    "name": "Example Learning Internship Two (placeholder)",
+    "provider": "Example Student Projects Office (placeholder)",
+    "summary_plain": "Placeholder internship summary. Eligibility details TODO(VERIFY).",
+    "benefit_text": "TODO(VERIFY): Placeholder benefit information.",
+    "rules": [
+      {
+        "id": "internship-state",
+        "field": "state",
+        "op": "==",
+        "value": "Maharashtra",
+        "label": "State matches the placeholder requirement",
+        "missing_hint": "Your state does not match the placeholder requirement. TODO(VERIFY)"
+      },
+      {
+        "id": "internship-course-level",
+        "field": "course_level",
+        "op": "==",
+        "value": "postgraduate",
+        "label": "Course level matches the placeholder requirement",
+        "missing_hint": "Your course level does not match the placeholder requirement. TODO(VERIFY)"
+      },
+      {
+        "id": "internship-category",
+        "field": "category",
+        "op": "==",
+        "value": "general",
+        "label": "Category matches the placeholder requirement",
+        "missing_hint": "Your category does not match the placeholder requirement. TODO(VERIFY)"
+      }
+    ],
+    "documents": [
+      { "name": "Example application record (placeholder)", "where_to_get": "TODO(VERIFY)" }
+    ],
+    "deadline": null,
+    "apply_url": "https://example.com/apply-internship-two",
+    "source_url": "https://example.com/internship-two",
+    "last_verified": "2026-11-19",
+    "verified": false,
+    "duration": "TODO(VERIFY): Placeholder duration.",
+    "location": "TODO(VERIFY): Placeholder location.",
+    "stipend_text": "TODO(VERIFY): Placeholder stipend information."
+  },
+  {
+    "id": "pm-usp-csss",
+    "type": "scholarship",
+    "name": "PM-USP Central Sector Scheme of Scholarship for College and University Students (CSSS)",
+    "provider": "Ministry of Education, Government of India",
+    "government_level": "central",
+    "jurisdiction_scope": "all_india",
+    "education_levels": ["undergraduate"],
+    "application_status": "open",
+    "summary_plain": "A Central Government scholarship for eligible students entering the first year of a regular undergraduate degree course. The detailed fresh-applicant conditions below are based on the latest available Ministry FAQ (2024–25); check the current NSP application form for the applicable conditions.",
+    "benefit_text": "Published guideline rates: ₹12,000 per year for the first three undergraduate years, and ₹20,000 for the fourth year of B.Tech/BE. These are published guideline rates; no newly issued 2026–27 rate notification is claimed here.",
+    "rules": [
+      {
+        "id": "family-income-limit",
+        "field": "annual_family_income",
+        "op": "<=",
+        "value": 450000,
+        "label": "Annual family income is at most ₹4.5 lakh",
+        "missing_hint": "Enter your annual family income to check this condition."
+      },
+      {
+        "id": "class12-percentile-cutoff",
+        "field": "class12_above_80th_percentile",
+        "op": "==",
+        "value": true,
+        "label": "Class 12 result is above the 80th percentile cutoff for the relevant board and stream",
+        "missing_hint": "Confirm whether your Class 12 result is above the relevant board and stream cutoff."
+      },
+      {
+        "id": "regular-degree-course",
+        "field": "regular_course",
+        "op": "==",
+        "value": true,
+        "label": "Enrolled in a regular course",
+        "missing_hint": "Confirm whether you are enrolled in a regular course."
+      },
+      {
+        "id": "no-other-scholarship",
+        "field": "receives_other_scholarship",
+        "op": "==",
+        "value": false,
+        "label": "Not receiving another scholarship or fee reimbursement",
+        "missing_hint": "Confirm whether you receive another scholarship or fee reimbursement."
+      },
+      {
+        "id": "recognized-institution",
+        "field": "institution_recognized",
+        "op": "==",
+        "value": true,
+        "label": "Institution meets the relevant recognition requirements",
+        "missing_hint": "Confirm whether your institution meets the scheme recognition requirements."
+      },
+      {
+        "id": "no-gap-after-class12",
+        "field": "gap_after_class12",
+        "op": "==",
+        "value": false,
+        "label": "No gap after Class 12",
+        "missing_hint": "Confirm whether you took a gap after Class 12."
+      },
+      {
+        "id": "class12-completion-period",
+        "field": "class12_completed_last_academic_year",
+        "op": "==",
+        "value": true,
+        "label": "Class 12 was completed in the applicable academic year",
+        "missing_hint": "Confirm whether you completed Class 12 in the applicable academic year."
+      },
+      {
+        "id": "first-year-undergraduate-course",
+        "field": "year_of_study",
+        "op": "==",
+        "value": 1,
+        "label": "Entering the first year of the undergraduate course",
+        "missing_hint": "Enter your year of study to check the fresh-applicant condition."
+      },
+      {
+        "id": "undergraduate-course",
+        "field": "course_level",
+        "op": "==",
+        "value": "undergraduate",
+        "label": "Enrolled in an undergraduate degree course; diploma and distance or correspondence courses are excluded",
+        "missing_hint": "Select your course level to check this condition."
+      }
+    ],
+    "documents": [],
+    "deadline": "2026-11-30",
+    "apply_url": "https://scholarships.gov.in/",
+    "source_url": "https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/PM_USP_CSSS_guidelines_updated.pdf",
+    "additional_sources": [
+      {
+        "name": "Ministry of Education FAQ (2024–25)",
+        "url": "https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/FAQs_PM_USP_CSSS_scheme.pdf"
+      },
+      {
+        "name": "National Scholarship Portal student announcements (AY 2026–27)",
+        "url": "https://scholarships.gov.in/iver/student-announcements"
+      }
+    ],
+    "verification_note": "Partially verified: the NSP announcement confirms the AY 2026–27 fresh application deadline. Detailed fresh-applicant conditions are based on the latest available Ministry FAQ (2024–25), not a newly verified 2026–27 FAQ; applicants should check the current NSP application form. Award amounts are published guideline rates, not a newly issued 2026–27 rate notification.",
+    "last_verified": "2026-11-21",
+    "verified": false
+  },
+  {
+    "id": "pre-matric-hazardous-occupations",
+    "type": "scholarship",
+    "name": "Pre-Matric Scholarship for Children of Parents or Guardians Engaged in Unclean and Hazardous Occupations",
+    "provider": "Ministry of Social Justice and Empowerment, Government of India",
+    "government_level": "central",
+    "jurisdiction_scope": "all_india",
+    "implementation_model": "centrally_sponsored_state_or_ut_implemented",
+    "education_levels": ["school"],
+    "class_range": "1–10",
+    "application_status": "unknown",
+    "summary_plain": "This centrally sponsored component supports full-time students in Classes 1–10 whose parent or guardian works in an occupation listed by the scheme. State and UT authorities administer applications. These profile checks are simplified; confirm eligibility and application steps with the relevant State or UT.",
+    "benefit_text": "See the current scheme guidelines and State or UT application instructions for the applicable allowance.",
+    "rules": [
+      { "id": "school-education-level", "field": "course_level", "op": "==", "value": "school", "label": "Currently studying in school", "missing_hint": "Select your current education level." },
+      { "id": "school-class-minimum", "field": "school_class", "op": ">=", "value": 1, "label": "Studying in Class 1 or above", "missing_hint": "Enter your current school class." },
+      { "id": "school-class-maximum", "field": "school_class", "op": "<=", "value": 10, "label": "Studying in Class 10 or below", "missing_hint": "Enter your current school class." },
+      { "id": "covered-parent-occupation", "field": "special_occupation_eligibility", "op": "==", "value": true, "label": "Parent or guardian works in a covered occupation", "missing_hint": "Confirm whether a parent or guardian works in an occupation covered by this scheme." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://scholarships.gov.in/",
+    "source_url": "https://socialjustice.gov.in/schemes/23",
+    "last_verified": "2026-11-21",
+    "verification_note": "Unverified listing. The Ministry describes this as a centrally sponsored scheme implemented through State and UT administrations. Profile rules are simplified and do not replace the State or UT verification process.",
+    "verified": false
+  },
+  {
+    "id": "national-means-cum-merit-scholarship",
+    "type": "scholarship",
+    "name": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+    "provider": "Department of School Education and Literacy, Ministry of Education, Government of India",
+    "government_level": "central",
+    "jurisdiction_scope": "all_india",
+    "implementation_model": "central_scheme_with_state_ut_selection",
+    "education_levels": ["school"],
+    "class_range": "9–12 (fresh awards at Class 9)",
+    "application_status": "closed",
+    "summary_plain": "Fresh awards are for selected Class 9 students; continuation may apply in Classes 10–12. The 2026–27 student application window shown on NSP ended on 15 November 2026. The profile checks cover key published conditions only; State or UT selection and renewal rules must also be checked.",
+    "benefit_text": "The Ministry's 2024–25 annual report lists ₹12,000 per year. Confirm current award details and continuation conditions in the current NSP notice.",
+    "rules": [
+      { "id": "nmmss-school-level", "field": "course_level", "op": "==", "value": "school", "label": "Currently studying in school", "missing_hint": "Select your current education level." },
+      { "id": "nmmss-fresh-class", "field": "school_class", "op": "==", "value": 9, "label": "Applying for a fresh award in Class 9", "missing_hint": "Enter your current school class." },
+      { "id": "nmmss-income-limit", "field": "annual_family_income", "op": "<=", "value": 350000, "label": "Parental income is at most ₹3.5 lakh per year", "missing_hint": "Enter your annual family income." },
+      { "id": "nmmss-school-type", "field": "school_type", "op": "in", "value": ["government", "government_aided", "local_body"], "label": "Studying at a Government, Government-aided, or local body school", "missing_hint": "Select your school type." },
+      { "id": "nmmss-selection-test", "field": "nmmss_selection_test_passed", "op": "==", "value": true, "label": "Passed the required MAT and SAT selection tests", "missing_hint": "Confirm whether you passed the required NMMSS selection tests." }
+    ],
+    "documents": [],
+    "deadline": "2026-11-15",
+    "apply_url": "https://scholarships.gov.in/",
+    "source_url": "https://www.education.gov.in/en/national-means-cum-merit-scholarship-scheme-nmmss",
+    "additional_sources": [{ "name": "NSP 2026–27 scholarship listings", "url": "https://scholarships.gov.in/All-Scholarships.action" }],
+    "last_verified": "2026-11-21",
+    "verification_note": "Partially researched. The 2026–27 NSP listing showed the student deadline as 15 November 2026. Eligibility details use the Ministry's latest available annual report and are simplified; no claim is made that every State selection or renewal condition is represented.",
+    "verified": false
+  },
+  {
+    "id": "aicte-pragati",
+    "type": "scholarship",
+    "name": "AICTE Pragati Scholarship Scheme for Girls",
+    "provider": "All India Council for Technical Education, Government of India",
+    "government_level": "central",
+    "jurisdiction_scope": "all_india",
+    "education_levels": ["diploma", "undergraduate"],
+    "application_status": "unknown",
+    "summary_plain": "For eligible girls entering the first year of a technical diploma or degree at an AICTE-approved institution through the specified centralized admission process. The listed rules are simplified; confirm current scheme conditions and cycle dates with AICTE or NSP.",
+    "benefit_text": "Award rates are not shown because the available AICTE scheme document is not a current-cycle rate notification.",
+    "rules": [
+      { "id": "pragati-course-level", "field": "course_level", "op": "in", "value": ["diploma", "undergraduate"], "label": "Enrolled in a technical diploma or undergraduate degree", "missing_hint": "Select your course level." },
+      { "id": "pragati-gender", "field": "gender", "op": "==", "value": "female", "label": "Applicant is a girl student", "missing_hint": "Provide your gender if you wish to check this condition." },
+      { "id": "pragati-first-year", "field": "year_of_study", "op": "==", "value": 1, "label": "Entering the first year", "missing_hint": "Enter your year of study." },
+      { "id": "pragati-income-limit", "field": "annual_family_income", "op": "<=", "value": 800000, "label": "Family income is at most ₹8 lakh per year", "missing_hint": "Enter your annual family income." },
+      { "id": "pragati-technical-course", "field": "technical_course", "op": "==", "value": true, "label": "Course is a technical programme", "missing_hint": "Confirm whether your course is a technical programme." },
+      { "id": "pragati-aicte-institution", "field": "institution_aicte_approved", "op": "==", "value": true, "label": "Institution is AICTE-approved", "missing_hint": "Confirm whether your institution is AICTE-approved." },
+      { "id": "pragati-centralized-admission", "field": "centralized_admission", "op": "==", "value": true, "label": "Admission was through the specified centralized process", "missing_hint": "Confirm whether admission used the specified centralized process." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://scholarships.gov.in/",
+    "source_url": "https://aicte-qa.aicte-india.org/sites/default/files/pragatisaksham.pdf",
+    "last_verified": "2026-11-21",
+    "verification_note": "Unverified for the current application cycle. The linked AICTE scheme document describes eligibility and scheme details but is not a 2026–27 notification. Profile checks are simplified and do not capture every family-level condition.",
+    "verified": false
+  },
+  {
+    "id": "top-class-education-sc",
+    "type": "scholarship",
+    "name": "Central Sector Scholarship of Top Class Education for SC Students",
+    "provider": "Ministry of Social Justice and Empowerment, Government of India",
+    "government_level": "central",
+    "jurisdiction_scope": "all_india",
+    "education_levels": ["undergraduate", "postgraduate"],
+    "application_status": "unknown",
+    "summary_plain": "For eligible Scheduled Caste students in full-time prescribed courses beyond Class 12 at institutions notified by the Ministry. The rules below cover key criteria; check the current institution list, available slots, and full guidelines before applying.",
+    "benefit_text": "Benefits depend on the current scheme guidelines, prescribed course, and notified institution; no amount is stated here.",
+    "rules": [
+      { "id": "top-class-sc-category", "field": "category", "op": "==", "value": "sc", "label": "Applicant belongs to a Scheduled Caste", "missing_hint": "Select your category if you wish to check this condition." },
+      { "id": "top-class-sc-income", "field": "annual_family_income", "op": "<=", "value": 800000, "label": "Annual family income is at most ₹8 lakh", "missing_hint": "Enter your annual family income." },
+      { "id": "top-class-sc-course", "field": "course_level", "op": "in", "value": ["undergraduate", "postgraduate"], "label": "Studying a prescribed course beyond Class 12", "missing_hint": "Select your course level." },
+      { "id": "top-class-sc-full-time", "field": "regular_course", "op": "==", "value": true, "label": "Enrolled in a full-time course", "missing_hint": "Confirm whether you are enrolled full-time." },
+      { "id": "top-class-sc-institution", "field": "institution_notified_for_top_class", "op": "==", "value": true, "label": "Institution is on the Ministry's current notified list", "missing_hint": "Confirm whether your institution is on the current notified list." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://scholarships.gov.in/",
+    "source_url": "https://socialjustice.gov.in/schemes/27",
+    "last_verified": "2026-11-21",
+    "verification_note": "Unverified listing. The Ministry lists 2026–27 guidelines and states that the scheme applies at empanelled institutions beyond Class 12. Detailed benefits and institution/course slots must be checked in the current guidelines.",
+    "verified": false
+  },
+  {
+    "id": "national-fellowship-sc",
+    "type": "scholarship",
+    "name": "National Fellowship for Scheduled Caste Students (NFSC)",
+    "provider": "Ministry of Social Justice and Empowerment, Government of India",
+    "government_level": "central",
+    "jurisdiction_scope": "all_india",
+    "education_levels": ["research"],
+    "application_status": "unknown",
+    "summary_plain": "Financial support for eligible Scheduled Caste students pursuing regular full-time M.Phil., Ph.D., or equivalent research study in recognized institutions. The profile check is simplified; selection, exam, admission, and current-cycle conditions must be confirmed with the implementing agency.",
+    "benefit_text": "Current fellowship rates and tenure are not stated here; check the latest Ministry or implementing-agency guidelines.",
+    "rules": [
+      { "id": "nfsc-category", "field": "category", "op": "==", "value": "sc", "label": "Applicant belongs to a Scheduled Caste", "missing_hint": "Select your category if you wish to check this condition." },
+      { "id": "nfsc-research-course", "field": "course_level", "op": "in", "value": ["phd", "research"], "label": "Pursuing an eligible research programme", "missing_hint": "Select your current course level." },
+      { "id": "nfsc-full-time", "field": "regular_course", "op": "==", "value": true, "label": "Enrolled in a regular full-time programme", "missing_hint": "Confirm whether you are enrolled full-time." },
+      { "id": "nfsc-institution", "field": "institution_recognized", "op": "==", "value": true, "label": "Institution is recognized under the applicable guidelines", "missing_hint": "Confirm whether your institution meets the applicable recognition conditions." },
+      { "id": "nfsc-net-qualification", "field": "net_or_csir_net_jrf_qualified", "op": "==", "value": true, "label": "Qualified UGC-NET-JRF or Joint CSIR-UGC NET-JRF", "missing_hint": "Confirm whether you qualified the applicable examination." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://nsfdc.nic.in/nfsc",
+    "source_url": "https://socialjustice.gov.in/schemes/29",
+    "last_verified": "2026-11-21",
+    "verification_note": "Unverified listing. The Ministry page describes the research focus and links current scheme guidelines. Current-cycle application dates and full selection conditions are not represented here.",
+    "verified": false
+  },
+  {
+    "id": "telangana-pre-matric-scholarships",
+    "type": "scholarship",
+    "name": "Telangana ePASS Pre-Matric Scholarships",
+    "provider": "Welfare Departments, Government of Telangana",
+    "government_level": "state",
+    "jurisdiction_scope": "state",
+    "state_code": "IN-TG",
+    "education_levels": ["school"],
+    "class_range": "Classes 5–10 (program-specific)",
+    "application_status": "unknown",
+    "summary_plain": "The Telangana ePASS manual describes pre-matric components for Classes 5–8 and 9–10, including the New Scheme and Rajiv Vidya Deevena. ePASS welfare support is administered through category-specific programs; covered community, school, income and renewal conditions vary by component.",
+    "benefit_text": "The applicable allowance depends on the specific pre-matric component and student eligibility. Current-cycle amounts are not stated here.",
+    "rules": [
+      { "id": "tg-pre-matric-state", "field": "state", "op": "==", "value": "Telangana", "label": "State of residence is Telangana", "missing_hint": "Enter your state or union territory of residence." },
+      { "id": "tg-pre-matric-level", "field": "course_level", "op": "==", "value": "school", "label": "Currently studying in school", "missing_hint": "Select your current education level." },
+      { "id": "tg-pre-matric-class-min", "field": "school_class", "op": ">=", "value": 5, "label": "Studying in Class 5 or above", "missing_hint": "Enter your current school class." },
+      { "id": "tg-pre-matric-class-max", "field": "school_class", "op": "<=", "value": 10, "label": "Studying in Class 10 or below", "missing_hint": "Enter your current school class." },
+      { "id": "tg-pre-matric-school-type", "field": "school_type", "op": "in", "value": ["government", "government_aided"], "label": "Studying at a Government or Government-aided school", "missing_hint": "Select your school type." },
+      { "id": "tg-pre-matric-community", "field": "category", "op": "in", "value": ["sc", "st", "bc_a", "bc_b", "bc_c", "bc_d", "bc_e", "ebc", "minority", "disabled"], "label": "Community is in an ePASS welfare group", "missing_hint": "Select your community category if known." },
+      { "id": "tg-pre-matric-no-other-aid", "field": "receives_other_scholarship", "op": "==", "value": false, "label": "Not receiving another scholarship", "missing_hint": "Confirm whether you receive another scholarship." },
+      { "id": "tg-pre-matric-income-provided", "field": "annual_family_income", "op": ">=", "value": 0, "label": "Annual family income is available for the component-specific check", "missing_hint": "Enter your annual family income; limits depend on the applicable component and category." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://telanganaepass.cgg.gov.in/",
+    "source_url": "https://telanganaepass.cgg.gov.in/downloads/SCDD-RTIManual.pdf",
+    "additional_sources": [{ "name": "Telangana ePASS eligibility information", "url": "https://telanganaepass.cgg.gov.in/WhoareEligible.do" }],
+    "last_verified": "2026-11-21",
+    "verification_status": "partially_verified",
+    "simplified": true,
+    "verification_note": "Partially verified, simplified screening. The official manual identifies Classes 5–8 and 9–10 components and lists Government/Government-aided schools. ePASS components have different community, income, and renewal conditions; this profile check does not replace the department-specific eligibility check. No current pre-matric deadline or rate is claimed.",
+    "verified": false
+  },
+  {
+    "id": "telangana-post-matric-scholarships",
+    "type": "scholarship",
+    "name": "Telangana ePASS Post-Matric Scholarships (RTF and MTF)",
+    "provider": "Welfare Departments, Government of Telangana",
+    "government_level": "state",
+    "jurisdiction_scope": "state",
+    "state_code": "IN-TG",
+    "education_levels": ["school", "diploma", "undergraduate", "postgraduate", "research"],
+    "application_status": "open",
+    "summary_plain": "Telangana ePASS post-matric support covers eligible Intermediate, diploma, graduate, postgraduate and other approved courses. Current ePASS information lists 2026–27 registration and a 31 March 2027 deadline. Community, income, course-group, age, admission and other rules vary by welfare department and course.",
+    "benefit_text": "Tuition Fee Reimbursement (RTF) covers eligible prescribed non-refundable tuition fees and is paid to the college. Maintenance Fee (MTF) supports maintenance or mess charges and is paid to the student. Amounts depend on the approved course and applicable rates.",
+    "rules": [
+      { "id": "tg-post-matric-state", "field": "state", "op": "==", "value": "Telangana", "label": "State of residence is Telangana", "missing_hint": "Enter your state or union territory of residence." },
+      { "id": "tg-post-matric-level", "field": "course_level", "op": "in", "value": ["intermediate", "diploma", "undergraduate", "postgraduate", "phd", "research"], "label": "Enrolled in a post-matric course covered by ePASS", "missing_hint": "Select your current course level." },
+      { "id": "tg-post-matric-regular", "field": "regular_course", "op": "==", "value": true, "label": "Enrolled in a regular eligible course", "missing_hint": "Confirm whether you are enrolled in a regular course." },
+      { "id": "tg-post-matric-community", "field": "category", "op": "in", "value": ["sc", "st", "bc_a", "bc_b", "bc_c", "bc_d", "bc_e", "ebc", "minority", "disabled"], "label": "Community is in an ePASS post-matric welfare group", "missing_hint": "Select your community category if known." },
+      { "id": "tg-post-matric-no-other-aid", "field": "receives_other_scholarship", "op": "==", "value": false, "label": "Not receiving another scholarship or stipend", "missing_hint": "Confirm whether you receive another scholarship or stipend." },
+      { "id": "tg-post-matric-income-provided", "field": "annual_family_income", "op": ">=", "value": 0, "label": "Annual family income is available for the department-specific check", "missing_hint": "Enter your annual family income; limits depend on community and applicable criteria." }
+    ],
+    "documents": [],
+    "deadline": "2027-03-31",
+    "apply_url": "https://telanganaepass.cgg.gov.in/FreshRegistration202627.do",
+    "source_url": "https://telanganaepass.cgg.gov.in/Scholarships.do",
+    "additional_sources": [
+      { "name": "2026–27 ePASS registration services and deadline", "url": "https://telanganaepass.cgg.gov.in/epassonlinelinks.do" },
+      { "name": "Eligible post-matric courses", "url": "https://telanganaepass.cgg.gov.in/CoursesOffered.do" }
+    ],
+    "last_verified": "2026-11-21",
+    "verification_status": "partially_verified",
+    "simplified": true,
+    "verification_note": "Partially verified, simplified screening. The current ePASS service page lists 2026–27 post-matric registration through 31 March 2027. The published income caps and other rules vary by category, residential area, course group, age and department; this profile check does not calculate those variations or guarantee sanction.",
+    "verified": false
+  },
+  {
+    "id": "ambedkar-overseas-vidya-nidhi-telangana",
+    "type": "scholarship",
+    "name": "Ambedkar Overseas Vidya Nidhi (Telangana)",
+    "provider": "Scheduled Castes Development and Tribal Welfare Departments, Government of Telangana",
+    "government_level": "state",
+    "jurisdiction_scope": "state",
+    "state_code": "IN-TG",
+    "education_levels": ["postgraduate"],
+    "application_status": "unknown",
+    "summary_plain": "Financial assistance for eligible Telangana SC or ST graduates pursuing higher studies in listed foreign countries. Published ePASS information includes a 60% graduation requirement, qualifying entrance and English-proficiency tests, foreign admission, and visa requirements. Department-specific guidelines and selection apply.",
+    "benefit_text": "The ePASS guidance describes support up to ₹20 lakh or the amount in the admission document, whichever is lower, plus eligible one-way economy airfare and visa charges. Confirm the current department order and award conditions.",
+    "rules": [
+      { "id": "tg-aovn-state", "field": "state", "op": "==", "value": "Telangana", "label": "State of residence is Telangana", "missing_hint": "Enter your state or union territory of residence." },
+      { "id": "tg-aovn-community", "field": "category", "op": "in", "value": ["sc", "st"], "label": "Applicant belongs to SC or ST", "missing_hint": "Select your community category." },
+      { "id": "tg-aovn-income", "field": "annual_family_income", "op": "<", "value": 500000, "label": "Family income is below ₹5 lakh per year", "missing_hint": "Enter your annual family income." },
+      { "id": "tg-aovn-postgraduate", "field": "course_level", "op": "==", "value": "postgraduate", "label": "Pursuing postgraduate study abroad", "missing_hint": "Select your intended course level." },
+      { "id": "tg-aovn-graduation-marks", "field": "graduation_percentage", "op": ">=", "value": 60, "label": "Graduation marks are at least 60% or equivalent", "missing_hint": "Enter your graduation percentage." },
+      { "id": "tg-aovn-country", "field": "overseas_country_eligible", "op": "==", "value": true, "label": "Study destination is on the scheme's eligible-country list", "missing_hint": "Confirm whether your study destination is on the current eligible-country list." },
+      { "id": "tg-aovn-tests", "field": "overseas_tests_criteria_met", "op": "==", "value": true, "label": "Meets the applicable entrance and English-proficiency test criteria", "missing_hint": "Confirm whether you meet the applicable test criteria." },
+      { "id": "tg-aovn-admission-visa", "field": "overseas_admission_and_visa", "op": "==", "value": true, "label": "Has the required foreign admission document and visa", "missing_hint": "Confirm whether you have the required admission document and visa." },
+      { "id": "tg-aovn-one-child", "field": "only_child_in_family", "op": "==", "value": true, "label": "No other child in the family has claimed the scheme", "missing_hint": "Confirm whether another child in your family has claimed this scheme." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+    "source_url": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+    "additional_sources": [
+      { "name": "Official Ambedkar Overseas Vidya Nidhi registration services", "url": "https://telanganaepass.cgg.gov.in/AOVNPreRequisites.do" },
+      { "name": "Telangana Government income-limit order for ST applicants", "url": "https://telanganaepass.cgg.gov.in/downloads/GoMsNo-1_ST.PDF" },
+      { "name": "ePASS scheme guidance and criteria", "url": "https://telanganaepass.cgg.gov.in/downloads/SCDD-RTIManual.pdf" }
+    ],
+    "last_verified": "2026-11-21",
+    "verification_status": "partially_verified",
+    "simplified": true,
+    "verification_note": "Partially verified, simplified screening. ePASS lists separate SC and ST department guidelines; the displayed ₹5 lakh income condition is supported for ST and by current portal guidance for SC, but applicants must confirm their department's current order, accepted tests, destination, and selection conditions. Application status and deadline are not confirmed.",
+    "verified": false
+  },
+  {
+    "id": "mahatma-jyothiba-phule-overseas-vidya-nidhi-telangana",
+    "type": "scholarship",
+    "name": "Mahatma Jyothiba Phule Overseas Vidya Nidhi (Telangana)",
+    "provider": "Backward Classes Welfare Department, Government of Telangana",
+    "government_level": "state",
+    "jurisdiction_scope": "state",
+    "state_code": "IN-TG",
+    "education_levels": ["postgraduate"],
+    "application_status": "unknown",
+    "summary_plain": "Financial assistance for eligible BC and EBC graduates pursuing postgraduate study in listed foreign countries. ePASS guidance specifies graduation marks, required entrance and English-proficiency scores, a foreign admission document and visa; selection is merit-based and subject to department rules.",
+    "benefit_text": "The ePASS guidance describes support up to ₹20 lakh or the amount in the admission document, whichever is lower, plus eligible one-way economy airfare and visa charges. Confirm the current department order and award conditions.",
+    "rules": [
+      { "id": "tg-mjpo-state", "field": "state", "op": "==", "value": "Telangana", "label": "State of residence is Telangana", "missing_hint": "Enter your state or union territory of residence." },
+      { "id": "tg-mjpo-community", "field": "category", "op": "in", "value": ["bc_a", "bc_b", "bc_c", "bc_d", "bc_e", "ebc"], "label": "Applicant belongs to an eligible BC or EBC category", "missing_hint": "Select your BC sub-category or EBC category if known." },
+      { "id": "tg-mjpo-income", "field": "annual_family_income", "op": "<", "value": 500000, "label": "Family income is below ₹5 lakh per year", "missing_hint": "Enter your annual family income." },
+      { "id": "tg-mjpo-postgraduate", "field": "course_level", "op": "==", "value": "postgraduate", "label": "Pursuing postgraduate study abroad", "missing_hint": "Select your intended course level." },
+      { "id": "tg-mjpo-graduation-marks", "field": "graduation_percentage", "op": ">=", "value": 60, "label": "Graduation marks are at least 60% or equivalent", "missing_hint": "Enter your graduation percentage." },
+      { "id": "tg-mjpo-country", "field": "overseas_country_eligible", "op": "==", "value": true, "label": "Study destination is on the scheme's eligible-country list", "missing_hint": "Confirm whether your study destination is on the current eligible-country list." },
+      { "id": "tg-mjpo-tests", "field": "overseas_tests_criteria_met", "op": "==", "value": true, "label": "Meets the required entrance and English-proficiency test criteria", "missing_hint": "Confirm whether you meet the applicable test criteria." },
+      { "id": "tg-mjpo-admission-visa", "field": "overseas_admission_and_visa", "op": "==", "value": true, "label": "Has the required foreign admission document and visa", "missing_hint": "Confirm whether you have the required admission document and visa." },
+      { "id": "tg-mjpo-one-child", "field": "only_child_in_family", "op": "==", "value": true, "label": "No other child in the family has claimed the scheme", "missing_hint": "Confirm whether another child in your family has claimed this scheme." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+    "source_url": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+    "additional_sources": [
+      { "name": "Telangana Government order establishing the scheme", "url": "https://telanganaepass.cgg.gov.in/downloads/2016BCW_MS23.PDF" },
+      { "name": "ePASS scheme guidance and current cycle notices", "url": "https://telanganaepass.cgg.gov.in/OverseasLinks.jsp" }
+    ],
+    "last_verified": "2026-11-21",
+    "verification_status": "partially_verified",
+    "simplified": true,
+    "verification_note": "Partially verified, simplified screening. The ePASS page lists the BC/EBC communities, income, country, graduation, test and admission conditions. Current-cycle application status and exact accepted-score/merit rules must be checked against the latest Government Order and application form.",
+    "verified": false
+  },
+  {
+    "id": "telangana-skill-upgradation-assistance",
+    "type": "scheme",
+    "name": "Telangana Skill Upgradation Assistance (GRE/GMAT/TOEFL/IELTS coaching)",
+    "provider": "Scheduled Castes Development and Tribal Welfare Departments, Government of Telangana",
+    "government_level": "state",
+    "jurisdiction_scope": "state",
+    "state_code": "IN-TG",
+    "education_levels": ["undergraduate", "postgraduate"],
+    "application_status": "unknown",
+    "summary_plain": "The ePASS Skill Up-gradation programme provides coaching for eligibility tests used for admission to foreign postgraduate study. Official guidance identifies SC and ST applicants who are graduates or in the final year of a qualifying course, with above 60% marks. Coaching and selection conditions should be confirmed with the department.",
+    "benefit_text": "The official FAQ describes free coaching for GRE, GMAT, TOEFL, IELTS and PTE. No cash benefit or current coaching schedule is claimed here.",
+    "rules": [
+      { "id": "tg-skill-state", "field": "state", "op": "==", "value": "Telangana", "label": "State of residence is Telangana", "missing_hint": "Enter your state or union territory of residence." },
+      { "id": "tg-skill-community", "field": "category", "op": "in", "value": ["sc", "st"], "label": "Applicant belongs to SC or ST", "missing_hint": "Select your community category." },
+      { "id": "tg-skill-course-level", "field": "course_level", "op": "in", "value": ["undergraduate", "postgraduate"], "label": "Graduated from or in the final year of a degree course", "missing_hint": "Select your current or qualifying course level." },
+      { "id": "tg-skill-graduate-or-final-year", "field": "graduated_or_final_year_qualifying_course", "op": "==", "value": true, "label": "Graduated or studying in the final year of a qualifying course", "missing_hint": "Confirm whether you have graduated or are in the final year of a qualifying course." },
+      { "id": "tg-skill-marks", "field": "graduation_percentage", "op": ">", "value": 60, "label": "Graduation or qualifying-course marks are above 60%", "missing_hint": "Enter your graduation or qualifying-course percentage." },
+      { "id": "tg-skill-income-provided", "field": "annual_family_income", "op": ">=", "value": 0, "label": "Annual family income is available for department verification", "missing_hint": "Enter your annual family income; current official guidance must be checked for the applicable limit." }
+    ],
+    "documents": [],
+    "deadline": null,
+    "apply_url": "https://telanganaepass.cgg.gov.in/CollegeServices.do",
+    "source_url": "https://telanganaepass.cgg.gov.in/downloads/SCDD-RTIManual.pdf",
+    "additional_sources": [{ "name": "ePASS Skill Upgradation student services", "url": "https://telanganaepass.cgg.gov.in/CollegeServices.do" }],
+    "last_verified": "2026-11-21",
+    "verification_status": "partially_verified",
+    "simplified": true,
+    "verification_note": "Partially verified, simplified screening. The official manual describes free coaching and the applicant groups/marks. Its program table and FAQ give conflicting family-income ceilings, so no threshold is encoded; confirm the current department criteria. Application status and schedule are not confirmed.",
+    "verified": false
+  }
+]

@@ -1,0 +1,22 @@
+﻿import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App.jsx'
+import { ProfileProvider } from './context/ProfileContext.jsx'
+import { SavedItemsProvider } from './context/SavedItemsContext.jsx'
+import { ThemeProvider } from './context/ThemeContext.jsx'
+import './index.css'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <ThemeProvider>
+      <ProfileProvider>
+        <SavedItemsProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </SavedItemsProvider>
+      </ProfileProvider>
+    </ThemeProvider>
+  </StrictMode>,
+)

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Demo Student One",
+    "course_level": "undergraduate",
+    "stream": "engineering",
+    "year_of_study": 1,
+    "state": "Karnataka",
+    "category": "sc",
+    "gender": "male",
+    "annual_family_income": 150000,
+    "last_exam_percentage": 88
+  },
+  {
+    "name": "Demo Student Two",
+    "course_level": "undergraduate",
+    "stream": "arts",
+    "year_of_study": 4,
+    "state": "Tamil Nadu",
+    "category": "general",
+    "gender": "female",
+    "annual_family_income": 550000,
+    "last_exam_percentage": 76
+  },
+  {
+    "name": "Demo Student Three",
+    "course_level": "postgraduate",
+    "stream": "science",
+    "year_of_study": 1,
+    "state": "Maharashtra",
+    "category": "general",
+    "gender": "female",
+    "annual_family_income": 1500000,
+    "last_exam_percentage": 91
+  },
+  {
+    "name": "Fictional CSSS Demo Student",
+    "course_level": "undergraduate",
+    "stream": "science",
+    "year_of_study": 1,
+    "state": "Maharashtra",
+    "category": "general",
+    "gender": "prefer_not_to_say",
+    "annual_family_income": 300000,
+    "last_exam_percentage": 86,
+    "class12_above_80th_percentile": true,
+    "class12_completed_last_academic_year": true,
+    "regular_course": true,
+    "receives_other_scholarship": false,
+    "gap_after_class12": false,
+    "institution_recognized": true
+  }
+]

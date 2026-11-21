@@ -1,0 +1,54 @@
+[
+  {
+    "id": "example-news-1",
+    "title": "Example student update one (placeholder)",
+    "date": "2026-11-18",
+    "source_name": "Example Public Information Office (placeholder)",
+    "source_url": "https://example.com/press-release-one",
+    "summary_plain": "Placeholder plain-language summary. TODO(VERIFY)",
+    "who_for": "TODO(VERIFY): Placeholder audience.",
+    "deadline": null,
+    "next_step": "TODO(VERIFY): Placeholder next step.",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-news-2",
+    "title": "Example student update two (placeholder)",
+    "date": "2026-11-16",
+    "source_name": "Example Student Information Office (placeholder)",
+    "source_url": "https://example.com/press-release-two",
+    "summary_plain": "Placeholder plain-language summary. TODO(VERIFY)",
+    "who_for": "TODO(VERIFY): Placeholder audience.",
+    "deadline": "2026-12-15",
+    "next_step": "TODO(VERIFY): Placeholder next step.",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-news-3",
+    "title": "Example student update three (placeholder)",
+    "date": "2026-11-12",
+    "source_name": "Example Learning Information Office (placeholder)",
+    "source_url": "https://example.com/press-release-three",
+    "summary_plain": "Placeholder plain-language summary. TODO(VERIFY)",
+    "who_for": "TODO(VERIFY): Placeholder audience.",
+    "deadline": null,
+    "next_step": "TODO(VERIFY): Placeholder next step.",
+    "last_verified": "2026-11-19",
+    "verified": false
+  },
+  {
+    "id": "example-news-4",
+    "title": "Example student update four (placeholder)",
+    "date": "2026-11-10",
+    "source_name": "Example Student Program Office (placeholder)",
+    "source_url": "https://example.com/press-release-four",
+    "summary_plain": "Placeholder plain-language summary. TODO(VERIFY)",
+    "who_for": "TODO(VERIFY): Placeholder audience.",
+    "deadline": "2027-01-10",
+    "next_step": "TODO(VERIFY): Placeholder next step.",
+    "last_verified": "2026-11-19",
+    "verified": false
+  }
+]

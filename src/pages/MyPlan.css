@@ -1,0 +1,74 @@
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body,
+  #root {
+    width: auto !important;
+    min-width: 0 !important;
+    background: #ffffff !important;
+  }
+
+  body {
+    font-size: 10.5pt;
+  }
+
+  .app-navigation,
+  .app-mobile-navigation,
+  .app-disclaimer,
+  .print-hidden {
+    display: none !important;
+  }
+
+  .app-shell,
+  .app-main {
+    background: #ffffff !important;
+  }
+
+  .app-main {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .my-plan-print {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .plan-opportunity {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) !important;
+    gap: 7mm !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .plan-opportunity > article,
+  .plan-documents {
+    min-width: 0 !important;
+    border-color: #94a3b8 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .plan-opportunity button {
+    display: none !important;
+  }
+
+  .plan-documents li {
+    break-inside: avoid;
+  }
+
+  .plan-documents input[type='checkbox'] {
+    appearance: auto !important;
+    print-color-adjust: exact;
+  }
+
+  .my-plan-print a {
+    color: #0f172a !important;
+    text-decoration: underline;
+  }
+}
