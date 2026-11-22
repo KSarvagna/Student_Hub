@@ -9,6 +9,7 @@ import Internships from './pages/Internships.jsx'
 import MyPlan from './pages/MyPlan.jsx'
 import Scholarships from './pages/Scholarships.jsx'
 import WhatsNew from './pages/WhatsNew.jsx'
+import ScholarshipAssistant from './pages/ScholarshipAssistant.jsx'
 
 const NAV_ITEMS = [
   { label: 'Home', to: '/', mobileLabel: 'Home' },
@@ -17,6 +18,7 @@ const NAV_ITEMS = [
   { label: 'Internships', to: '/internships', mobileLabel: 'Intern-\nships' },
   { label: "What's New", to: '/whats-new', mobileLabel: "What's\nNew" },
   { label: 'My Plan', to: '/my-plan', mobileLabel: 'My Plan' },
+  { label: 'AI Assistant', to: '/assistant', mobileLabel: 'AI\nHelp' },
 ]
 
 function navigationClassName({ isActive }) {
@@ -70,6 +72,7 @@ export default function App() {
           <Route path="/internships" element={<Internships />} />
           <Route path="/whats-new" element={<WhatsNew />} />
           <Route path="/my-plan" element={<MyPlan />} />
+          <Route path="/assistant" element={<ScholarshipAssistant />} />
           <Route path="*" element={<EmptyState title="Page not found" message="This section could not be found." nextStep="Return to Home to continue." actionLabel="Go to Home" onAction={() => window.location.assign('/')} />} />
         </Routes>
       </main>
@@ -79,7 +82,7 @@ export default function App() {
       </div>
 
       <nav aria-label="Mobile navigation" className="app-mobile-navigation fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-brand-navigation px-1 pb-[env(safe-area-inset-bottom)] md:hidden">
-        <ul className="mx-auto grid max-w-xl grid-cols-6">
+        <ul className="mx-auto grid max-w-xl grid-cols-7">
           {NAV_ITEMS.map((item) => (
             <li key={item.to} className="min-w-0">
               <NavLink

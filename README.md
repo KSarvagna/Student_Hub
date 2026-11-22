@@ -27,6 +27,7 @@ The current catalogue contains 6 Central Government records, 5 Telangana Governm
 - Tailwind CSS
 - Browser `localStorage`
 - Vitest
+- Express and Google's `@google/genai` SDK for the scholarship assistant
 
 ## Run locally
 
@@ -37,12 +38,16 @@ npm install
 npm run dev
 ```
 
+Before starting, copy `.env.example` to `.env` and set `GEMINI_API_KEY` to your Google AI Studio API key. The key is read only by the Express backend and must never be added to frontend code.
+
 Open the local URL printed by Vite. Run quality checks with:
 
 ```sh
 npm test
 npm run build
 ```
+
+The development command starts Vite and the Express API together. The scholarship assistant is available from **AI Assistant** in the navigation. For deployment, configure `GEMINI_API_KEY` as a backend environment secret, deploy the Express API, and configure the frontend host to proxy `/api` to that API.
 
 The production build is written to `dist/`.
 
@@ -58,7 +63,7 @@ The production build is written to `dist/`.
 
 ## Current limitations
 
-- This is a static, browser-only application. It does not submit applications, scrape live portals, or provide user accounts or cloud sync.
+- It does not submit scholarship applications, scrape live portals, or provide user accounts or cloud sync.
 - The catalogue is a focused starter set, not a complete inventory of every Central or Telangana Government scholarship.
 - Eligibility results only evaluate the rules represented in each record. Simplified or partially verified items are labeled; the result is guidance, not an official decision.
 - Some state-program criteria vary by community, course, location or current Government Order and need confirmation on ePASS.
