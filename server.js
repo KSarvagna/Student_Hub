@@ -6,10 +6,37 @@ import { buildAssistantInstruction } from './src/engine/assistantPrompt.js'
 import { createScholarshipDemoAnswer } from './src/engine/scholarshipDemo.js'
 
 const app = express()
+const allowedOrigins = new Set([
+  'https://student-hub-ten-mauve.vercel.app',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+])
+const allowedLanguages = new Set(['English', 'Telugu', 'Hindi'])
+const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null
+
+app.use((req, res, next) => {
+  const origin = req.get('Origin')
+  if (origin && !allowedOrigins.has(origin)) {
+    return res.status(403).json({ error: 'This origin is not allowed to access the Student Hub API.' })
+  }
+  if (origin) {
+    res.setHeader('Access-Control-Allow-Origin', origin)
+    res.setHeader('Vary', 'Origin')
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    res.setHeader('Access-Control-Max-Age', '600')
+  }
+  if (req.method === 'OPTIONS') return res.sendStatus(origin ? 204 : 400)
+  return next()
+})
 app.use(express.json({ limit: '12kb' }))
 
-const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null
-const allowedLanguages = new Set(['English', 'Telugu', 'Hindi'])
+function createDemoResponse(question) {
+  return {
+    answer: createScholarshipDemoAnswer(question, schemes),
+    mode: 'demo',
+  }
+}
 
 function getGeminiStatus(error) {
   const directStatus = Number(error?.status ?? error?.statusCode)
@@ -30,7 +57,7 @@ app.post('/api/chat', async (req, res) => {
     return res.status(400).json({ error: 'Enter a question of up to 1,000 characters.' })
   }
   if (!allowedLanguages.has(language)) return res.status(400).json({ error: 'Choose English, Telugu or Hindi.' })
-  if (!ai) return res.status(503).json({ error: 'The assistant is not configured yet. Add GEMINI_API_KEY to the backend .env file and restart the app.' })
+  if (!ai) return res.json(createDemoResponse(question.trim()))
 
   try {
     const result = await ai.models.generateContent({
@@ -42,24 +69,17 @@ app.post('/api/chat', async (req, res) => {
     })
     const answer = result.text?.trim()
     if (!answer) return res.status(502).json({ error: 'The assistant returned an empty response. Please try again.' })
-    return res.json({ answer })
+    return res.json({ answer, mode: 'ai' })
   } catch (error) {
     const status = getGeminiStatus(error)
     const transportCode = error?.cause?.code ?? error?.code
     console.error('Gemini request failed:', JSON.stringify({ status, code: transportCode }))
 
-    if (transportCode === 'EACCES') {
-      return res.json({
-        answer: createScholarshipDemoAnswer(question.trim(), schemes),
-        mode: 'demo',
-      })
+    if (status === 503 || status === 429) {
+      return res.json(createDemoResponse(question.trim()))
     }
-
-    if (status === 503) {
-      return res.status(503).json({ error: 'Gemini is temporarily overloaded (HTTP 503). Please try again shortly.' })
-    }
-    if (status === 429) {
-      return res.status(429).json({ error: 'Gemini request limits were reached (HTTP 429). Please wait and try again.' })
+    if (['EACCES', 'ECONNREFUSED', 'ECONNRESET', 'ENETUNREACH', 'EHOSTUNREACH', 'ETIMEDOUT', 'ENOTFOUND'].includes(transportCode)) {
+      return res.json(createDemoResponse(question.trim()))
     }
     if (status === 401 || status === 403) {
       return res.status(502).json({ error: `Gemini rejected the backend credentials (HTTP ${status}). Check the backend API key and project access.` })
@@ -74,5 +94,5 @@ app.post('/api/chat', async (req, res) => {
   }
 })
 
-const port = Number(process.env.PORT) || 3001
+const port = process.env.PORT || 3001
 app.listen(port, () => console.log(`Student Hub API listening on ${port}`))

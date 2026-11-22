@@ -6,6 +6,8 @@ const LANGUAGES = [
   { value: 'Hindi', label: 'हिन्दी' },
 ]
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? '').trim().replace(/\/+$/, '')
+
 export default function ScholarshipAssistant() {
   const [language, setLanguage] = useState('English')
   const [question, setQuestion] = useState('')
@@ -22,7 +24,7 @@ export default function ScholarshipAssistant() {
     setError('')
     setLoading(true)
     try {
-      const response = await fetch('/api/chat', {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: text, language }),
