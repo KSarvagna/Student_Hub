@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { readAssistantResponse } from '../utils/readAssistantResponse.js'
 
 const LANGUAGES = [
   { value: 'English', label: 'English' },
@@ -24,13 +25,15 @@ export default function ScholarshipAssistant() {
     setError('')
     setLoading(true)
     try {
+      if (import.meta.env.PROD && !API_BASE_URL) {
+        throw new Error('VITE_API_BASE_URL is missing in the Vercel deployment. Set it to the Render service URL and redeploy.')
+      }
       const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: text, language }),
       })
-      const data = await response.json()
-      if (!response.ok) throw new Error(data.error || 'The assistant could not respond.')
+      const data = await readAssistantResponse(response)
       setMessages((current) => [...current, { role: 'assistant', text: data.answer, mode: data.mode }])
     } catch (requestError) {
       setError(requestError.message || 'Could not reach the assistant. Please try again.')
